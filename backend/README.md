@@ -1,7 +1,9 @@
 
 # ⚙️ Plant Disease Classifier — Backend
 
-This directory houses the enterprise-grade **FastAPI** backend microservice for the 38-class Plant Disease Classifier. It abstracts the underlying PyTorch machine learning logic behind structured, asynchronous web channels—hardened with file sanitation headers, API rate limit safeguards, and decoupled modular layer logic.
+This directory houses the enterprise-grade FastAPI microservice for the 38-class -class Plant Disease Classifier. It abstracts the underlying PyTorch machine learning logic behind structured, asynchronous web channels—hardened with file sanitation headers, API rate limit safeguards, and decoupled modular layer logic.
+
+
 ---
 
 ## Folder Structure
