@@ -1,1 +1,231 @@
 
+{
+    "Apple___Apple_scab": {
+        "disease_name": "Apple Scab",
+        "chemical_treatment": "Apply protective fungicides containing Captan or Mancozeb early in the spring green tip stage.",
+        "organic_remedy": "Spray sulfur or copper-based soaps, or use organic Bacillus subtilis formulations.",
+        "prevention": "Rake and destroy fallen leaves in autumn to disrupt the fungus overwintering cycle. Prune trees to maximize sunlight and airflow."
+    },
+    "Apple___Black_rot": {
+        "disease_name": "Apple Black Rot",
+        "chemical_treatment": "Apply flutriafol or thiophanate-methyl fungicides during the blossom cluster stage.",
+        "organic_remedy": "Prune out dead cankers and apply liquid copper sprays safely during the dormant season.",
+        "prevention": "Remove dead wood, mummified fruits hanging on branches, and infected twigs from the orchard immediately."
+    },
+    "Apple___Cedar_apple_rust": {
+        "disease_name": "Cedar Apple Rust",
+        "chemical_treatment": "Apply systemic myclobutanil fungicides at the pink bud stage through petal fall.",
+        "organic_remedy": "Apply copper sprays or neem oil mixtures early in the spring season.",
+        "prevention": "Avoid planting apple trees near ornamental cedar/juniper trees, which act as co-hosts for the rust fungus lifecycle."
+    },
+    "Apple___healthy": {
+        "disease_name": "Healthy Apple Tree Leaf",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Maintain annual structural pruning schedules and apply balanced slow-release compost mixtures around the root base."
+    },
+    "Blueberry___healthy": {
+        "disease_name": "Healthy Blueberry Plant",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Keep soil conditions highly acidic (pH 4.5 - 5.5) and lay down a thick layer of pine bark mulch to preserve root hydration."
+    },
+    "Cherry___Powdery_mildew": {
+        "disease_name": "Cherry Powdery Mildew",
+        "chemical_treatment": "Deploy localized Myclobutanil or alternate sterol-inhibitor fungicides if patterns emerge.",
+        "organic_remedy": "Spray a solution of potassium bicarbonate or diluted horticultural oils on affected foliage leaves.",
+        "prevention": "Prune high interior water sprouts to clear out heavy canopy clusters and allow rapid leaf drying after rain blocks."
+    },
+    "Cherry___healthy": {
+        "disease_name": "Healthy Cherry Tree Leaf",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Ensure well-drained orchard soil layouts and track trunk safety parameters against early spring frost cracks."
+    },
+    "Corn___Cercospora_leaf_spot Gray_leaf_spot": {
+        "disease_name": "Corn Gray Leaf Spot",
+        "chemical_treatment": "Apply strobilurin or triazole group fungicides if lesions reach the ear leaves during pollination stages.",
+        "organic_remedy": "Apply copper soap formulations or bio-fungicide sprays containing beneficial bacteria.",
+        "prevention": "Implement strict non-cereal crop rotation practices and choose hybrid seeds with verified high resistance ratings."
+    },
+    "Corn___Common_rust": {
+        "disease_name": "Corn Common Rust",
+        "chemical_treatment": "Fungicide applications are rarely cost-effective unless applied early on high-value sweet corn plots using pyraclostrobin.",
+        "organic_remedy": "Dust leaves with fine elemental sulfur powders during early cool, humid weather intervals.",
+        "prevention": "Plant resistant hybrid variations and destroy local sweet corn residue immediately following autumn harvests."
+    },
+    "Corn___Northern_Leaf_Blight": {
+        "disease_name": "Northern Corn Leaf Blight",
+        "chemical_treatment": "Deploy propiconazole or azoxystrobin fungicides if long cigar-shaped lesions emerge prior to silking.",
+        "organic_remedy": "Apply certified organic Bacillus amyloliquefaciens microbial crop sprays.",
+        "prevention": "Manage fields with deep conservation tillage techniques to bury infected crop residue and disrupt fungal spores."
+    },
+    "Corn___healthy": {
+        "disease_name": "Healthy Corn Foliage",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Ensure appropriate soil nitrogen injection profiles and maintain proper plant spacing density to minimize humidity buildup."
+    },
+    "Grape___Black_rot": {
+        "disease_name": "Grape Black Rot",
+        "chemical_treatment": "Spray tebuconazole or mancozeb starting from early bud break until grapes reach full size.",
+        "organic_remedy": "Apply liquid copper sprays consistently before rain events during early vine development cycles.",
+        "prevention": "Prune vines down to a clean trellis framework and strip out all mummified berries from the vineyard floor to kill spore hideouts."
+    },
+    "Grape___Esca_(Black_Measles)": {
+        "disease_name": "Grape Esca (Black Measles)",
+        "chemical_treatment": "No highly reliable chemical treatments exist for active vine wood core infections; protect large pruning wounds with specialized paste barriers.",
+        "organic_remedy": "Apply liquid line-sulfur trunk washes during the deep winter dormant phase.",
+        "prevention": "Avoid pruning vines during wet weather blocks when fungal wood spores fly. Sanitize lopping shears with alcohol between every single vine."
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+        "disease_name": "Grape Leaf Blight",
+        "chemical_treatment": "Apply broad-spectrum protectant copper-mancozeb mixtures post-harvest if late-season leaf loss poses a risk.",
+        "organic_remedy": "Spray organic neem extract solutions or copper hydroxide formulations directly on infected vine rows.",
+        "prevention": "Clear away fallen leaf carpets under trellis frames and ensure proper lower-canopy leaf pulling to increase ground air speeds."
+    },
+    "Grape___healthy": {
+        "disease_name": "Healthy Grapevine Foliage",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Maintain proper cane-tying configurations and ensure annual soil testing profiles to prevent potassium deficiencies."
+    },
+    "Orange___Haunglongbing_(Citrus_greening)": {
+        "disease_name": "Citrus Greening (HLB)",
+        "chemical_treatment": "There is no cure for this bacterial infection. Chemical management centers on aggressively spraying insecticides like imidacloprid to control the Asian Citrus Psyllid insect vector.",
+        "organic_remedy": "Spray organic horticultural oils or pyrethrin solutions to suppress psyllid bugs; inject nutritional mineral tonics to prolong tree life.",
+        "prevention": "Immediately cut down, uproot, and burn any tree showing symptoms to save the remaining uninfected sections of the grove."
+    },
+    "Peach___Bacterial_spot": {
+        "disease_name": "Peach Bacterial Spot",
+        "chemical_treatment": "Apply protective oxytetracycline or specific low-dose copper bactericide sprays during the early shuck-split stage.",
+        "organic_remedy": "Apply regular protective sprays of garlic extracts or specialized biological serenade solutions.",
+        "prevention": "Avoid high-nitrogen fertilizer drops which cause overly lush leaf growth that holds moisture, and select orchard zones with exceptional wind profiles."
+    },
+    "Peach___healthy": {
+        "disease_name": "Healthy Peach Tree Foliage",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Execute interior canopy pruning to clear out dense wood clusters and provide optimal light access for upcoming fruit loads."
+    },
+    "Pepper,_bell___Bacterial_spot": {
+        "disease_name": "Bell Pepper Bacterial Spot",
+        "chemical_treatment": "Apply copper hydroxide mixed with mancozeb to overcome copper-resistant bacterial strain profiles.",
+        "organic_remedy": "Spray organic streptomycin or copper soap solutions at the first sign of water-soaked lower spots.",
+        "prevention": "Never work in pepper patches or pick produce while leaves are wet from dew or rain. Purchase certified clean seed stocks."
+    },
+    "Pepper,_bell___healthy": {
+        "disease_name": "Healthy Bell Pepper Plant",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Provide consistent staking support and lay down organic straw mulch to stop mud from splashing up onto the lower branches."
+    },
+    "Potato___Early_blight": {
+        "disease_name": "Potato Early Blight",
+        "chemical_treatment": "Apply copper-based fungicides or Mancozeb sprays early in the morning.",
+        "organic_remedy": "Spray a solution of organic Neem Oil or a diluted liquid copper soap mixture.",
+        "prevention": "Practice strict crop rotation, clear out old tomato/potato debris, and avoid overhead watering to keep leaves dry."
+    },
+    "Potato___Late_blight": {
+        "disease_name": "Potato Late Blight",
+        "chemical_treatment": "Deploy systemic chlorothalonil or protectant fungicides immediately upon detection.",
+        "organic_remedy": "Apply organic Bacillus subtilis strains or copper hydroxide formulations.",
+        "prevention": "Plant certified disease-free seed potatoes and ensure wide spacing to maximize air circulation."
+    },
+    "Potato___healthy": {
+        "disease_name": "Healthy Potato Foliage",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Hill soil properly around growing stems to protect developing potato tubers from direct sunlight and wind-driven spores."
+    },
+    "Raspberry___healthy": {
+        "disease_name": "Healthy Raspberry Plant",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Prune out spent floricanes right at ground level immediately following late-summer harvests to make room for clean primocane growth."
+    },
+    "Soybean___healthy": {
+        "disease_name": "Healthy Soybean Crop",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Maintain calculated row widths and monitor fields consistently for early signs of root-knot nematode activity."
+    },
+    "Squash___Powdery_mildew": {
+        "disease_name": "Squash Powdery Mildew",
+        "chemical_treatment": "Spray systemic triadimefon or standard chlorothalonil solutions at the first sign of white dust spots.",
+        "organic_remedy": "Spray a mixture of baking soda, water, and non-detergent liquid soap, or use diluted milk sprays in full sun.",
+        "prevention": "Space vine mounds far apart to optimize air flow, and maximize full-day solar access to break down mildew spore generation."
+    },
+    "Strawberry___Leaf_scorch": {
+        "disease_name": "Strawberry Leaf Scorch",
+        "chemical_treatment": "Apply protective captan or dodine fungicides before blossoms open if conditions are warm and damp.",
+        "organic_remedy": "Apply organic copper soaps or neem-based essential oil sprays to the foliage rows.",
+        "prevention": "Renovate strawberry beds cleanly after harvest by mowing old leaves and thinning crowded daughter runner plants."
+    },
+    "Strawberry___healthy": {
+        "disease_name": "Healthy Strawberry Plant",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Mulch beds cleanly with clean agricultural straw to keep the strawberries from touching bare, damp soil blocks."
+    },
+    "Tomato___Bacterial_spot": {
+        "disease_name": "Tomato Bacterial Spot",
+        "chemical_treatment": "Spray copper-mancozeb tank mixes continuously at 7-day intervals during high humidity conditions.",
+        "organic_remedy": "Apply organic bio-fungicides containing Bacillus amyloliquefaciens to suppress bacterial colony growth.",
+        "prevention": "Eliminate all volunteer tomato weeds around the patch and rotate fields away from solanaceous crops for 2 years."
+    },
+    "Tomato___Early_blight": {
+        "disease_name": "Tomato Early Blight",
+        "chemical_treatment": "Apply chlorothalonil, mancozeb, or copper fungicides at the first sign of concentric lower leaf rings.",
+        "organic_remedy": "Apply organic copper octanoate or regular neem oil extract treatments to vulnerable foliage.",
+        "prevention": "Prune off the lowest 12 inches of leaf branches to prevent rain from splashing soil-borne spores onto the lower leaves."
+    },
+    "Tomato___Late_blight": {
+        "disease_name": "Tomato Late Blight",
+        "chemical_treatment": "This is highly destructive. Spray protectant chlorothalonil or systemic cymoxanil immediately when local outbreaks are reported.",
+        "organic_remedy": "Apply organic fixed-copper formulas or copper sulfate treatments at tight intervals.",
+        "prevention": "Destroy infected tomato vines completely at the end of the season. Do not compost infected leaves; bag and discard them."
+    },
+    "Tomato___Leaf_Mold": {
+        "disease_name": "Tomato Leaf Mold",
+        "chemical_treatment": "Apply protective fungicides like mancozeb or chlorothalonil when greenhouse humidity levels spike.",
+        "organic_remedy": "Deploy organic potassium bicarbonate solutions or certified sulfur vapor treatments.",
+        "prevention": "This is predominantly a greenhouse issue. Increase ventilation, add exhaust fans, and use drip irrigation to keep greenhouse air dry."
+    },
+    "Tomato___Septoria_leaf_spot": {
+        "disease_name": "Tomato Septoria Leaf Spot",
+        "chemical_treatment": "Apply protective chlorothalonil or copper-based sprays immediately as small dark specks crop up on lower stems.",
+        "organic_remedy": "Apply regular preventative sprays of liquid copper soap formulations.",
+        "prevention": "Mulch around the base of the plant to create a barrier over the soil, and cage tomatoes to keep branches off the ground."
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "disease_name": "Tomato Two-Spotted Spider Mites",
+        "chemical_treatment": "Apply specialized miticides or acaricides like abamectin. Avoid heavy broad-spectrum insecticides which kill beneficial predatory bugs.",
+        "organic_remedy": "Release live natural predatory mites (Phytoseiulus persimilis) or spray leaves thoroughly with insecticidal soaps.",
+        "prevention": "Keep plants well-watered. Spider mites reproduce exponentially in hot, dusty, drought-stressed conditions."
+    },
+    "Tomato___Target_Spot": {
+        "disease_name": "Tomato Target Spot",
+        "chemical_treatment": "Apply azoxystrobin or chlorothalonil fungicides when small water-soaked spots form on leaves.",
+        "organic_remedy": "Spray organic copper hydroxide formulas evenly across vulnerable tomato branches.",
+        "prevention": "Ensure wide spacing between plants and practice meticulous weed removal around the perimeter of the garden plot."
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "disease_name": "Tomato Yellow Leaf Curl Virus (TYLCV)",
+        "chemical_treatment": "There is no chemical treatment for the virus itself. You must spray imidacloprid insecticides to target the Silverleaf Whitefly bug which injects the disease.",
+        "organic_remedy": "Install fine mesh netting over young plants and spray organic neem oil or insecticidal soaps to knock down whitefly bugs.",
+        "prevention": "Uproot and completely destroy infected yellowing plants immediately to stop the whiteflies from spreading the virus to nearby healthy plants."
+    },
+    "Tomato___Tomato_mosaic_virus": {
+        "disease_name": "Tomato Mosaic Virus (ToMV)",
+        "chemical_treatment": "No chemical treatments can cure a viral plant infection. Once infected, the plant must be removed to protect the rest of the crop.",
+        "organic_remedy": "None effective. Wash all tools and hands with milk or trisodium phosphate solutions to neutralize viral particles.",
+        "prevention": "Do not smoke near tomato plants, as tobacco products can harbor mosaic viruses that can be transmitted mechanically by hands."
+    },
+    "Tomato___healthy": {
+        "disease_name": "Healthy Tomato Plant Leaf",
+        "chemical_treatment": "None required.",
+        "organic_remedy": "None required.",
+        "prevention": "Maintain steady deep watering routines at the root base and check leaves weekly to maintain excellent plant health."
+    }
+}

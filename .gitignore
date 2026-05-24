@@ -12,3 +12,5 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+plant_model.pth
