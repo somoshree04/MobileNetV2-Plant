@@ -1,61 +1,41 @@
-import io
-import json
-import torch
-import torch.nn as nn
-from torchvision import models,transforms
-from PIL import Image
-from fastapi import FastAPI,File,UploadFile
-from fastapi.middleware.cors import CORSMiddleware
 
-app=FastAPI()
+
+import uvicorn
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.core.config import settings
+from app.api.v1_predict import router as api_router
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
+
+#  global client IP rate limiter tracker
+limiter = Limiter(key_func=get_remote_address)
+
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    version=settings.VERSION,
+    docs_url="/docs" # Swagger documentation dashboard
+)
+
+# Rate Limiter exception handler attached to handle traffic blocks smoothly
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-
 )
 
-with open("classes.json" , "r") as f:
-    class_name=json.load(f)
+# 5. v1 prediction route maps injected under the /api/v1 prefix path
+app.include_router(api_router, prefix=settings.API_V1_STR)
 
-device=torch.device("cpu")
-
-model=models.mobilenet_v2()
-
-num_classes = len(class_name)
-model.classifier[1] = nn.Linear(model.last_channel, num_classes)
-
-model.load_state_dict(torch.load("plant_model .pth", map_location=device))
-model.eval()
-
-def transform_image(image_bytes):
-    transform = transforms.Compose([
-        transforms.Resize((224, 224)), 
-        transforms.ToTensor(),        
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
-    ])
-
-    image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    return transform(image).unsqueeze(0)
-
-@app.post("/predict") 
-async def predict(file: UploadFile = File(...)):
-    image_bytes = await file.read()
-    
-    tensor = transform_image(image_bytes)
-    
-    with torch.no_grad():
-        outputs = model(tensor) 
-        _, predicted = torch.max(outputs, 1) 
-        
-    prediction = class_name[predicted.item()]
-    
-    return {"prediction": prediction}
-
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Plant Disease Classifier Backend Production Server!"}
 
 if __name__ == "__main__":
-    import uvicorn
-    # This actually starts the engine on port 8000
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("main.py:app", host="127.0.0.1", port=8000, reload=True)
