@@ -1,6 +1,11 @@
+
 fastapi
 uvicorn
-torch
-torchvision
+torch==2.2.2
+torchvision==0.17.2
 pillow
 python-multipart
+slowapi
+pytest
+httpx
+anyio
