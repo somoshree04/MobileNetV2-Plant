@@ -12,23 +12,27 @@ import os
 router = APIRouter()
 limiter = Limiter(key_func=get_remote_address)
 
-@router.post("/predict", status_code=status.HTTP_200_OK)
-@limiter.limit("5/minute") # Restricts any single IP to 5 hits per minute
+@router.post("/predict")
+@limiter.limit("5/minute")
 def predict_plant_disease(request: Request, file: UploadFile = File(...)):
+    #  Execute the security firewall verification pass
+    # (Must Not re-assign 'file =' to this call!)
+    validate_uploaded_image(file)
     
-    image_stream = validate_uploaded_image(file)
+    # Extract the file's raw multi-part binary data stream pointer
+    image_stream = file.file
     
-    # Saves stream to a temporary file locally on disk so Pillow/PyTorch can digest it safely
+    # Process the file cache lifecycle workspace smoothly
     temp_file_path = f"temp_{file.filename}"
     try:
         with open(temp_file_path, "wb") as buffer:
             shutil.copyfileobj(image_stream, buffer)
             
-        #  Passes the file path into PyTorch inference service
-        remedy_payload = predict_leaf_disease(temp_file_path)
-        return remedy_payload
+        # Trigger PyTorch inference engine pipeline
+        prediction_payload = predict_leaf_disease(temp_file_path)
+        return prediction_payload
         
     finally:
-        #  Ensures that the temporary image is deleted from disk even if the model errors out
+        # Guaranteed clean-up pass to wipe local storage caches
         if os.path.exists(temp_file_path):
             os.remove(temp_file_path)
