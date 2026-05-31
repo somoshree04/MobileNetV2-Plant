@@ -1,80 +1,85 @@
 
-# 🍃 Green Guard: AI-Powered Plant Disease Scanner
 
-Green Guard is a full-stack deep learning web application that allows agriculturalists, researchers, and home gardeners to upload images of plant leaves and receive instant, actionable health diagnoses. Powered by a custom-trained **MobileNetV2** neural network, the system detects leaf anomalies and returns automated organic remedies, chemical treatments, and preventative care plans.
+# 🍃 Green Guard — AI Plant Disease Scanner
 
----
-
-## 🏗️ System Architecture
-
-The application is split into three decoupled modules:
-1. **Research Pipeline (`/research`)**: Data processing, training, and export scripts for the MobileNetV2 computer vision model.
-2. **Backend API (`/backend`)**: A robust FastAPI production server wrapped with client rate-limiting and structured data validation.
-3. **Frontend Dashboard (`/frontend`)**: A responsive, lightning-fast TypeScript React dashboard stylized with Tailwind CSS.
+Green Guard is a full-stack deep learning web app that diagnoses plant leaf diseases from uploaded images. Powered by a custom-trained **MobileNetV2** neural network, it returns instant disease identification alongside organic remedies, chemical treatments, and preventative care plans.
 
 ---
 
-## ✨ Features
+## How It Works
 
-* **Instant AI Diagnosis**: Real-time evaluation of leaf geometry using an optimized computer vision model.
-* **Comprehensive Remediation Plans**: Delivers structured advice broken into Condition Names, Organic Remedies, Chemical Treatments, and Prevention Guidelines.
-* **API Rate Limiting**: Built-in traffic defense using `slowapi` to prevent server resource exhaustion.
-* **Type-Safe Endpoints**: Strict data models using TypeScript interfaces on the client and Pydantic on the server to prevent data schema mismatches.
+Upload a photo of a plant leaf → the model classifies it across **38 disease categories** → the backend returns a structured treatment plan in real time.
 
 ---
 
-## 🚀 Getting Started
+## Modules
+
+| Directory | Role |
+|---|---|
+| `/research` | Data ingestion, MobileNetV2 training pipeline, model export |
+| `/backend` | FastAPI production server — rate limiting, validation, inference |
+| `/frontend` | React + TypeScript dashboard — upload UI, results display |
+
+---
+
+## Features
+
+- **Instant AI Diagnosis** — real-time leaf classification via an optimized MobileNetV2 vision model
+- **Structured Remediation** — results include condition name, organic remedy, chemical treatment, and prevention guidelines
+- **Rate Limiting** — `slowapi` enforces per-IP request caps to protect server resources
+- **Type-Safe Stack** — TypeScript interfaces on the client, Pydantic models on the server
+
+---
+
+## Getting Started
 
 ### Prerequisites
-* Python 3.10+
-* Node.js v18+
-* npm or yarn
+- Python `3.10+`
+- Node.js `v18+`
+- npm or yarn
 
 ---
 
-### 🎛️ 1. Backend Server Setup
-
-Navigate to the backend directory, spin up your virtual environment, install the modules, and boot the server:
+### 1 — Backend
 
 ```bash
 cd backend
 
-# Create and activate the virtual environment
+# Create & activate virtual environment
 python -m venv venv
-# On Windows PowerShell:
-.\venv\Scripts\Activate
-# On Mac/Linux:
-source venv/bin/activate
+.\venv\Scripts\Activate   # Windows
+source venv/bin/activate  # Mac/Linux
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Start the production server
 uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
 
-### 🎛️ 2. Frontend Interface Setup
-
-Navigate to the frontend folder, install the node modules, and launch the Vite development server:
+### 2 — Frontend
 
 ```bash
 cd frontend
-
-# Install UI modules
 npm install
-
-# Start Vite server
 npm run dev
+```
 
-## 🛠️ Technology Stack
+---
 
-* **Frontend**: React 18, TypeScript, Vite, Tailwind CSS
-* **Backend**: FastAPI , Uvicorn, Slowapi (Rate Limiter), Pydantic
-* **Machine Learning**: PyTorch , MobileNetV2, Jupyter Notebook
+## Tech Stack
 
+| Layer | Technologies |
+|---|---|
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS |
+| Backend | FastAPI, Uvicorn, Slowapi, Pydantic |
+| ML | PyTorch, MobileNetV2, Jupyter Notebook |
 
-* **Dataset**: The model training pipeline leverages the **PlantVillage Dataset**, specifically utilizing the standardized web distribution hosted by Sharada Mohanty. 
+---
 
-* **Source Repository**: [spMohanty/PlantVillage-Dataset](https://github.com/spMohanty/PlantVillage-Dataset)
-* **Direct Data Stream Link**: [PlantVillage Master Zip Archive](https://github.com/spMohanty/PlantVillage-Dataset/archive/refs/heads/master.zip)
+## Dataset
 
-The subset contains thousands of high-resolution, multiclass plant leaf images categorized across distinct healthy and diseased biological classifications, which are streamed, unpacked, and normalized directly inside our research pipeline
+The training pipeline uses the **PlantVillage Dataset** maintained by [Sharada Mohanty](https://github.com/spMohanty/PlantVillage-Dataset) — a collection of high-resolution, multi-class plant leaf images spanning healthy and diseased biological classifications.
+
+The archive is streamed, unpacked, and normalized directly inside the research pipeline:
+
+```
+https://github.com/spMohanty/PlantVillage-Dataset/archive/refs/heads/master.zip
+```
