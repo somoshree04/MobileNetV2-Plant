@@ -1,6 +1,8 @@
 
 // This blueprint represents the structured JSON dictionary our FastAPI model returns.
 export interface PredictionResult {
-  class_name: string;
-  confidence: number;
+  disease_name: string;
+  chemical_treatment: string;
+  organic_remedy: string;
+  prevention: string; 
 }

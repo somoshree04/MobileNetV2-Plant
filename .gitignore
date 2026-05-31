@@ -14,3 +14,7 @@ dist/
 Thumbs.db
 
 plant_model.pth
+
+# DataTest Samples
+test_images/
+
