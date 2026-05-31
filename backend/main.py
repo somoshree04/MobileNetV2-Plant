@@ -27,8 +27,7 @@ app.add_middleware(
     # Inside backend/app/core/config.py
     ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://127.0.0.1:8000", 
+    "http://127.0.0.1:5173", 
 ]
 )
 
@@ -40,4 +39,4 @@ def read_root():
     return {"message": "Welcome to the Plant Disease Classifier Backend Production Server!"}
 
 if __name__ == "__main__":
-    uvicorn.run("main.py:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

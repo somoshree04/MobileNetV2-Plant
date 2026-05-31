@@ -1,4 +1,5 @@
 
+
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { PredictionResult } from './types';
 
@@ -33,8 +34,8 @@ export default function App() {
     formData.append('file', file);
 
     try {
-      // Connect to our running FastAPI container port bridge!
-      const response = await fetch('http://localhost:8000/api/v1/predict', {
+      // Fixed: Pointing exactly to the 127.0.0.1 loopback IP whitelisted by CORS
+        const response = await fetch('http://127.0.0.1:8000/api/v1/predict', {
         method: 'POST',
         body: formData,
       });
@@ -85,11 +86,16 @@ export default function App() {
         )}
 
         {prediction && (
-          <div className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
-            <h3 className="font-bold text-emerald-900 mb-2">AI Diagnostic Report</h3>
+          <div className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-100 space-y-3">
+            <h3 className="font-bold text-lg text-emerald-900 border-b border-emerald-200 pb-2">AI Diagnostic Report</h3>
             <div className="text-sm text-emerald-800 space-y-1">
-              <p><strong>Condition:</strong> {prediction.class_name.replace(/___/g, ' ')}</p>
-              <p><strong>Confidence Match:</strong> {(prediction.confidence * 100).toFixed(1)}%</p>
+              <p><strong>Condition:</strong> {prediction.disease_name}</p>
+              <p><strong>Organic Remedy:</strong> {prediction.organic_remedy}</p>
+              <p><strong>Chemical Option:</strong> {prediction.chemical_treatment}</p>
+              {/* Fixed: Added missing closing </p> tag below */}
+              <p className="bg-white p-3 rounded-lg border border-emerald-100 mt-2 text-xs text-slate-600 leading-relaxed">
+                <strong>Prevention Plan:</strong> {prediction.prevention}
+              </p>
             </div>
           </div>
         )}
